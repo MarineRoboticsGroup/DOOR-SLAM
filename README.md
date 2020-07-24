@@ -35,7 +35,7 @@ cd ~
 ```
 sudo apt-get install ros-melodic-rtabmap-ros
 cd ~
-git clone --recursive-submodules git@github.com:MarineRoboticsGroup/multi_robot_SLAM_separators.git
+git clone --recurse-submodules git@github.com:MarineRoboticsGroup/multi_robot_SLAM_separators.git
 cd multi_robot_SLAM_separators/ros_ws
 catkin init
 cs src
@@ -45,7 +45,8 @@ cd ~
 ```
 4) Clone the current repo
 ```
-git clone git@github.com:MarineRoboticsGroup/DOOR-SLAM.git
+cd ~
+git clone --recurse-submodules git@github.com:MarineRoboticsGroup/DOOR-SLAM.git
 cd DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_distributed_mapper/cpp/
 mkdir build && cd build
 cmake ..
@@ -54,6 +55,7 @@ cd ../../src
 mkdir build && cd build
 cmake ..
 make -j6
+cd ~
 ```
 5) Run 
 ```
