@@ -1,9 +1,12 @@
 # DOOR-SLAM
 
-## Installation without docker
+These documents are installation instructions for MRG usage with mostly MRG forked repos but with the original citations and references
+
+## Installation without docker (MRG)
 
 1) Install argos3
 ```
+cd ~
 git clone https://github.com/ilpincy/argos3.git argos3
 cd argos3
 mkdir build_myrobot
@@ -12,9 +15,11 @@ cmake -DARGOS_BUILD_FOR=myrobot ../src
 make
 make doc
 sudo make install
+cd ~
 ```
 2) Install Buzz
 ```
+cd ~
 git clone https://github.com/MISTLab/Buzz.git buzz
 cd buzz
 mkdir build
@@ -24,14 +29,19 @@ make
 cd buzz/build
 sudo make install
 sudo ldconfig
+cd ~
 ```
 3) Install Multi-Robot separators + source the ROS ws
 ```
-git clone git@github.com:bramtoula/multi_robot_SLAM_separators.git
+sudo apt-get install ros-melodic-rtabmap-ros
+cd ~
+git clone --recursive-submodules git@github.com:MarineRoboticsGroup/multi_robot_SLAM_separators.git
 cd multi_robot_SLAM_separators/ros_ws
 catkin init
+cs src
 catkin build
 source devel/setup.bash
+cd ~
 ```
 4) Clone the current repo
 ```
