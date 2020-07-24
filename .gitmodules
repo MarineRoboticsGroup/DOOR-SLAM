@@ -10,3 +10,12 @@
 
 
 
+[submodule "tx2-setup/robust_pose_graph_optimization"]
+	path = tx2-setup/robust_pose_graph_optimization
+	url = git@github.com:MarineRoboticsGroup/robust_distributed_slam_module.git
+[submodule "simulation/robust_distributed_slam_simulation"]
+	path = simulation/robust_distributed_slam_simulation
+	url = git@github.com:MarineRoboticsGroup/robust_distributed_slam_simulation.git
+[submodule "tx2-setup/slam_front_end"]
+	path = tx2-setup/slam_front_end
+	url = git@github.com:MarineRoboticsGroup/multi_robot_SLAM_separators.git
