@@ -53,11 +53,12 @@ cd ~
 ```
 cd ~
 git clone --recurse-submodules git@github.com:MarineRoboticsGroup/DOOR-SLAM.git
-cd DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_distributed_mapper/cpp/
+cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_distributed_mapper/cpp/
 mkdir build && cd build
 cmake ..
 make -j6
-cd ../../../src 
+sudo make install
+cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/src
 mkdir build && cd build
 cmake ..
 make -j6
