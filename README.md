@@ -5,6 +5,12 @@ These documents are installation instructions for MRG usage with mostly MRG fork
 ## Installation without docker (MRG)
 
 1) Install argos3
+You can either do this with a .deb file **(recommended)**
+```
+[ARGoS Download Page](https://www.argos-sim.info/core.php)
+```
+
+or by building and installing from source
 ```
 cd ~
 git clone https://github.com/ilpincy/argos3.git argos3
@@ -51,15 +57,14 @@ cd DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_dist
 mkdir build && cd build
 cmake ..
 make -j6
-cd ../../src 
+cd ../../../src 
 mkdir build && cd build
 cmake ..
 make -j6
-cd ~
 ```
 5) Run 
 ```
-cd ../../argos-simulation
+cd ../../../../argos_simulation
 argos3 -c robust_distributed_slam_dataset.argos
 ```
 [Read the paper!](https://arxiv.org/abs/1909.12198)
@@ -87,3 +92,4 @@ BibTex:
     primaryClass={cs.RO}
 }
 ```
+
