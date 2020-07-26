@@ -27,7 +27,7 @@ cd ~
 ```
 cd ~
 git clone https://github.com/MISTLab/Buzz.git buzz
-cd buzz
+cd ~/buzz
 mkdir build
 cd build
 cmake ../src
@@ -62,10 +62,11 @@ cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/src
 mkdir build && cd build
 cmake ..
 make -j6
+sudo make install
 ```
-5) Run 
+5) Run
 ```
-cd ../../../../argos_simulation
+cd ../../../argos_simulation
 argos3 -c robust_distributed_slam_dataset.argos
 ```
 [Read the paper!](https://arxiv.org/abs/1909.12198)
