@@ -54,12 +54,15 @@ cd ~
 cd ~
 git clone --recurse-submodules git@github.com:MarineRoboticsGroup/DOOR-SLAM.git
 cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_distributed_mapper/cpp/
-mkdir build && cd build
+mkdir build 
+cd build
 cmake ..
 make -j6
 sudo make install
 cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/src
-mkdir build && cd build
+mkdir build 
+cd build
+rm -rf *
 cmake ..
 make -j6
 sudo make install
@@ -69,6 +72,24 @@ sudo make install
 cd ../../../argos_simulation
 argos3 -c robust_distributed_slam_dataset.argos
 ```
+
+
+## Common Issues
+*Failed Install of ARGoS*
+Run `argos3` in terminal. If output is `[FATAL] No --help, --version, --config-file or --query options specified.` then you likely installed successfully. If `command not found` then try uninstalling and reinstalling with the `.deb` file specified above
+
+To uninstall argos3 after building from source
+``` bash
+sudo rm -rf /usr/local/bin/argos3
+sudo rm -rf /usr/local/doc/argos3
+sudo rm -rf /usr/local/include/argos3
+sudo rm -rf /usr/local/lib/argos3
+sudo rm -rf /usr/local/lib/pkgconfig/argos3_simulator.pc
+sudo rm -rf /usr/local/libexec/argos3
+sudo rm -rf /usr/local/share/man/man1/argos3.1.gz
+sudo rm -rf /usr/local/share/argos3
+```
+
 [Read the paper!](https://arxiv.org/abs/1909.12198)
 [Code documentation here!](https://mistlab.ca/DOOR-SLAM/)
 
