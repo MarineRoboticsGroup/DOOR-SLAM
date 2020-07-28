@@ -75,7 +75,7 @@ nano cpp_controller_dataset_parameters.bzz
 *Change DATASET_NAME to the path of the .g2o files. Should just have to change <user> from alan to your user*
 ``` bash
 cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/argos_simulation/
-bzzc dataset_mapping.bo
+bzzc dataset_mapping.bzz
 argos3 -c robust_distributed_slam_dataset.argos
 ```
 
