@@ -11,7 +11,7 @@ You can either do this with a .deb file **(recommended)**
 ```
 
 or by building and installing from source
-```
+``` bash
 cd ~
 git clone https://github.com/ilpincy/argos3.git argos3
 cd argos3
@@ -24,7 +24,7 @@ sudo make install
 cd ~
 ```
 2) Install Buzz
-```
+``` bash
 cd ~
 git clone https://github.com/MISTLab/Buzz.git buzz
 cd ~/buzz
@@ -38,7 +38,7 @@ sudo ldconfig
 cd ~
 ```
 3) Install Multi-Robot separators + source the ROS ws
-```
+``` bash
 sudo apt-get install ros-melodic-rtabmap-ros
 cd ~
 git clone --recurse-submodules git@github.com:MarineRoboticsGroup/multi_robot_SLAM_separators.git
@@ -50,7 +50,7 @@ source devel/setup.bash
 cd ~
 ```
 4) Clone the current repo
-```
+``` bash
 cd ~
 git clone --recurse-submodules git@github.com:MarineRoboticsGroup/DOOR-SLAM.git
 cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/buzz_slam/robust_distributed_mapper/cpp/
@@ -68,8 +68,13 @@ make -j6
 sudo make install
 ```
 5) Run
+``` bash
+cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/argos_simulation/config/simulation_dataset
+nano cpp_controller_dataset_parameters.bzz
 ```
-cd ../../../argos_simulation
+*Change DATASET_NAME to the path of the .g2o files. Should just have to change <user> from alan to your user*
+``` bash
+cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/argos_simulation/
 bzzc dataset_mapping.bo
 argos3 -c robust_distributed_slam_dataset.argos
 ```
