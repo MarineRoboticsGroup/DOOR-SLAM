@@ -46,7 +46,6 @@ cd multi_robot_SLAM_separators/ros_ws
 catkin init
 cs src
 catkin build
-source devel/setup.bash
 cd ~
 ```
 4) Clone the current repo
