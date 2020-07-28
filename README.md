@@ -70,6 +70,7 @@ sudo make install
 5) Run
 ```
 cd ../../../argos_simulation
+bzzc dataset_mapping.bo
 argos3 -c robust_distributed_slam_dataset.argos
 ```
 
