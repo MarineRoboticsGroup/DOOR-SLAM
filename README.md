@@ -2,7 +2,7 @@
 
 These documents are installation instructions for MRG usage with mostly MRG forked repos but with the original citations and references
 
-## Installation without docker (MRG)
+## Setup for the ARGoS Simulation (MRG)
 
 1) Install argos3
 You can either do this with a .deb file **(recommended)**
@@ -67,7 +67,7 @@ cmake ..
 make -j6
 sudo make install
 ```
-5) Run
+5) Test on premade ARGoS experiment
 ``` bash
 cd ~/DOOR-SLAM/simulation/robust_distributed_slam_simulation/argos_simulation/config/simulation_dataset
 nano cpp_controller_dataset_parameters.bzz
